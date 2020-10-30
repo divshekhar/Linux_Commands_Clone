@@ -19,7 +19,7 @@ int listDir(const int argc, const char *path)
             BOLD_RED();
             printf("Cannot Open Current Directory : %s\n", strerror(errno));
             RESET();
-            exit(1);
+            exit(EXIT_FAILURE);
         }
     }
     else
@@ -29,7 +29,7 @@ int listDir(const int argc, const char *path)
             BOLD_RED();
             printf("ERROR: %s\n", strerror(errno));
             RESET();
-            exit(1);
+            exit(EXIT_FAILURE);
         }
     }
 
@@ -48,14 +48,14 @@ int listDir(const int argc, const char *path)
         
     }
     closedir(dir);
-    exit(0);
+    exit(EXIT_SUCCESS);
     
 }
 
 int main(int argc,char *argv[])
 {
     listDir(argc,argv[1]);
-    return 0;
+    return EXIT_SUCCESS;
 }
 
 
