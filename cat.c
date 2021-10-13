@@ -1,3 +1,5 @@
+//C Program to implement linux Cat coammand
+
 #include<stdio.h>
 #include<stdlib.h>
 
