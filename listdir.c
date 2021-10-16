@@ -47,6 +47,7 @@ int listDir(const int argc, const char *path)
         }
         
     }
+    // close directory
     closedir(dir);
     exit(EXIT_SUCCESS);
     
