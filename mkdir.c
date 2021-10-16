@@ -8,6 +8,7 @@ const char *name = "Arbitrary Directory";
 int main(void) {
 
     errno = 0;
+    // create directory
     int ret = mkdir(name, S_IRWXU);
     if (ret == -1) {
         switch (errno) {
